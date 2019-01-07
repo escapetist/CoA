@@ -21,7 +21,6 @@ carry = 0;
 cin = 0;
 for i =4:-1:1
     [sum,carry] = adder(a(i),b(i),carry);
-    [sum,carry] = adder(a(i),b(i),cin);
     s(i) = sum;
 end
 if carry == 0
@@ -41,10 +40,10 @@ if carry == 0
 end
 fprintf("%d ",s);
 fprintf("\n");
-subplot(3,3,1);
+subplot(3,1,1);
 stem(a,'r');
-subplot(3,3,2);
-stem(b,'b');
 subplot(3,1,2);
+stem(b,'b');
+subplot(3,1,3);
 stem(s,'g');
 fprintf("%d",carry);
