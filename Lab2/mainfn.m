@@ -4,17 +4,14 @@ for i=1:4
 end
 for i=1:4
     b(i) = input(' ');
-    if b(i) == 0
-        b(i) = 1;
-    else
-        b(i) = 0;
-    end
-    disp(b)
 end
-carry = 1;
-for i =4:-1:1
-    [sum,carry] = adder(b(i),0,carry);
-    b(i) = sum;
+c=0;
+x = [0 0 0 0];
+for i = 1:-1:4
+    if a(i) == 1
+        x(i) = x(i)+b(i);
+    end
+    shift((&c),x,b);
 end
 disp(b)
 carry = 0;
